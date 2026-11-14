@@ -1,6 +1,7 @@
 package org.example.enums;
 
 public enum ParkingSpotStatus {
-    Occupied,
-    Empty
+    OCCUPIED,
+    AVAILABLE,
+    OUT_OF_SERVICE
 }

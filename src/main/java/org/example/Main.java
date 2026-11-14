@@ -18,16 +18,16 @@ public class Main {
         int parkingFloorId = 0;
         int parkingSpotId = 0;
 
-        ParkingSpot parkingSpot11 = new ParkingSpot(parkingSpotId, List.of(VehicleType.Car, VehicleType.Bike), ParkingSpotStatus.Empty, null);
-        ParkingSpot parkingSpot12 = new ParkingSpot(parkingSpotId+1, List.of(VehicleType.Bike), ParkingSpotStatus.Empty, null);
-        ParkingSpot parkingSpot13 = new ParkingSpot(parkingSpotId+2, List.of(VehicleType.Car), ParkingSpotStatus.Empty, null);
-        ParkingSpot parkingSpot14 = new ParkingSpot(parkingSpotId+3, List.of(VehicleType.Bike), ParkingSpotStatus.Empty, null);
+        ParkingSpot parkingSpot11 = new ParkingSpot(parkingSpotId, List.of(VehicleType.CAR, VehicleType.BIKE), ParkingSpotStatus.AVAILABLE, null);
+        ParkingSpot parkingSpot12 = new ParkingSpot(parkingSpotId+1, List.of(VehicleType.BIKE), ParkingSpotStatus.AVAILABLE, null);
+        ParkingSpot parkingSpot13 = new ParkingSpot(parkingSpotId+2, List.of(VehicleType.CAR), ParkingSpotStatus.AVAILABLE, null);
+        ParkingSpot parkingSpot14 = new ParkingSpot(parkingSpotId+3, List.of(VehicleType.BIKE), ParkingSpotStatus.AVAILABLE, null);
 
 
-        ParkingSpot parkingSpot21 = new ParkingSpot(parkingSpotId, List.of(VehicleType.Car, VehicleType.Bike), ParkingSpotStatus.Empty, null);
-        ParkingSpot parkingSpot22 = new ParkingSpot(parkingSpotId+4, List.of(VehicleType.Bike), ParkingSpotStatus.Empty, null);
-        ParkingSpot parkingSpot23 = new ParkingSpot(parkingSpotId+5, List.of(VehicleType.Car), ParkingSpotStatus.Empty, null);
-        ParkingSpot parkingSpot24 = new ParkingSpot(parkingSpotId+6, List.of(VehicleType.Bike), ParkingSpotStatus.Empty, null);
+        ParkingSpot parkingSpot21 = new ParkingSpot(parkingSpotId, List.of(VehicleType.CAR, VehicleType.BIKE), ParkingSpotStatus.AVAILABLE, null);
+        ParkingSpot parkingSpot22 = new ParkingSpot(parkingSpotId+4, List.of(VehicleType.BIKE), ParkingSpotStatus.AVAILABLE, null);
+        ParkingSpot parkingSpot23 = new ParkingSpot(parkingSpotId+5, List.of(VehicleType.CAR), ParkingSpotStatus.AVAILABLE, null);
+        ParkingSpot parkingSpot24 = new ParkingSpot(parkingSpotId+6, List.of(VehicleType.BIKE), ParkingSpotStatus.AVAILABLE, null);
 
         ParkingFloor parkingFloor1 = new ParkingFloor(parkingFloorId, List.of(parkingSpot11, parkingSpot12, parkingSpot13, parkingSpot14));
         ParkingFloor parkingFloor2 = new ParkingFloor(parkingFloorId+1, List.of(parkingSpot21, parkingSpot22, parkingSpot23, parkingSpot24));
@@ -36,7 +36,7 @@ public class Main {
 
         EntryGate entryGate = new EntryGate(1, parkingLot);
 
-        Vehicle vehicle = new Vehicle("qwqewqe", VehicleType.Bike);
+        Vehicle vehicle = new Vehicle("qwqewqe", VehicleType.BIKE);
 
         Ticket ticket = entryGate.enter(1, vehicle, parkingLot);
     }

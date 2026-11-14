@@ -37,7 +37,7 @@ public class ParkingSpot {
             throw new IllegalArgumentException("Vehicle cannot be null");
         }
 
-        if (this.status.equals(ParkingSpotStatus.Occupied)) {
+        if (this.status.equals(ParkingSpotStatus.OCCUPIED)) {
             System.out.println("parkingSpot is not Empty");
             return false;
         }
@@ -48,20 +48,20 @@ public class ParkingSpot {
         }
 
         System.out.println("placed vehicle: " + vehicle.getVehicleNumber() + "to parkingSpot" + this.id);
-        this.status = ParkingSpotStatus.Occupied;
+        this.status = ParkingSpotStatus.OCCUPIED;
         this.vehicle = vehicle;
 
         return true;
     }
 
     public synchronized void removeVehicle(Vehicle vehicle){
-        if (status.equals(ParkingSpotStatus.Empty) || Objects.isNull(vehicle)) {
+        if (status.equals(ParkingSpotStatus.AVAILABLE) || Objects.isNull(vehicle)) {
             System.out.println("parkingSpot is already Empty");
             return;
         }
 
         System.out.println("placed vehicle: " + vehicle.getVehicleNumber() + "to parkingSpot" + this.id);
-        this.status = ParkingSpotStatus.Empty;
+        this.status = ParkingSpotStatus.AVAILABLE;
         this.vehicle = null;
     }
 }

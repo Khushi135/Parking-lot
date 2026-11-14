@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 public class Bill {
     private int billNumber;
     private double amount;
-    private BillStatus billStatus = BillStatus.In_Progress;
+    private BillStatus billStatus = BillStatus.PENDING;
     private LocalDateTime exitTime;
     private Ticket ticket;
     private ExitGate exitGate;
