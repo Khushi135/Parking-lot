@@ -1,8 +1,9 @@
-package org.example.strategy;
+package org.example.strategy.SpotAllocation;
 
-import org.example.ParkingLot;
-import org.example.ParkingSpot;
-import org.example.Vehicle;
+import org.example.model.EntryGate;
+import org.example.model.ParkingLot;
+import org.example.model.ParkingSpot;
+import org.example.model.Vehicle;
 
 public class LinearSpotAllocationStrategy implements SpotAllocationStrategy{
     private Vehicle vehicle;
@@ -14,7 +15,7 @@ public class LinearSpotAllocationStrategy implements SpotAllocationStrategy{
     }
 
     @Override
-    public ParkingSpot findAvailableSpot(Vehicle vehicle, ParkingLot parkingLot) {
+    public ParkingSpot findAvailableSpot(Vehicle vehicle, ParkingLot parkingLot, EntryGate entryGate) {
         return null;
     }
 }

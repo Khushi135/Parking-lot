@@ -1,7 +1,7 @@
-package org.example.strategy;
+package org.example.strategy.SpotAllocation;
 
-import org.example.ParkingLot;
-import org.example.Vehicle;
+import org.example.model.ParkingLot;
+import org.example.model.Vehicle;
 
 public class SpotAllocationFactory {
 
